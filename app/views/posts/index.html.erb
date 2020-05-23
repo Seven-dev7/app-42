@@ -5,7 +5,7 @@
 		<p> <%= post.content %></p>
 		<p>
 			<a href="<%= post_path(post.id) %>", class="btn btn-primary">Lire la suite </a>
-			<a href="<%= edit_post_path(@post.id) %>", class="btn btn-primary"> Editer </a>
+			<a href="<%= edit_post_path(post.id) %>", class="btn btn-primary"> Editer </a>
 			<a href="<%= post_path(post.id) %>", class="btn btn-danger" data-confirm="Sur?" data-method="delete">Supprimer</a>
 		</p>
 		<%end%>

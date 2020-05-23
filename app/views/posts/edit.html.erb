@@ -1,4 +1,4 @@
-<h1> Creer un post </h1> 
+<h1> Editer  article </h1>
 
 <%= form_with model: @post do |f| %>
   	<div class="form-group">
@@ -10,12 +10,7 @@
 		<label> Contenu </label>
   		<%= f.text_area :content, class: 'form-control' %>
   	</div>
-
   	<div class="form-group">
-		<label> user_id </label>
-  		<%= f.text_field :user_id, class: 'form-control' %>
-  	</div>
-  	<div class="form-group">
-  		<button type="submit" class="btn btn-primary"> Creer un article	</button>
+  		<%= f.submit "Edit", class: "btn btn-primary" %>
   	</div>
 <% end %>

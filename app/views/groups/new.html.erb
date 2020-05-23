@@ -1,0 +1,8 @@
+<h1> Creer un Groupe</h1> 
+
+<%= simple_form_for @group do |f| %>
+  <%= f.input :title, label: "Le titre de l'article", error: 'Un titre est obligatoire' %>
+  <%= f.input :description, label: "description du Groupe" %>
+  <%= f.association :user, as: :hidden, input_html: {value: current_user.id} %>  
+  <%= f.button :submit %>
+<% end %>

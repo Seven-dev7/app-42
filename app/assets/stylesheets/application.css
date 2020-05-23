@@ -13,3 +13,19 @@
  *= require_tree .
  *= require_self
  */
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.card-index-post-title {
+	width: 48rem;
+	margin-left: 15%;
+	margin-top: 2%;
+	margin-bottom: 5%;
+}
+.card-index-post-content {
+	margin-left: 15%;
+	margin-top: 2%;
+	margin-bottom: 5%;
+}

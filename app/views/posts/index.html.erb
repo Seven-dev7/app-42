@@ -1,14 +1,20 @@
 <h1> Articles </h1>
-
+<a class="btn btn-warning" href="<%= new_post_path %>"> Creer un article </a>
+	<div class="card" >
 	<% @posts.each do |post| %>
-		<h2> <%= post.user.email %></h2>
-		<h2> <%= post.title %> </h2>
-		<p> <%= post.content %></p>
-		<p>
-			<a href="<%= post_path(post.id) %>", class="btn btn-primary">Lire la suite </a>
-			<a href="<%= edit_post_path(post.id) %>", class="btn btn-primary"> Editer </a>
-			<a href="<%= post_path(post.id) %>", class="btn btn-danger" data-confirm="Sur?" data-method="delete">Supprimer</a>
-		</p>
-		<%end%>
+		<div class=" card-index-post-title" style="width: 48rem; border:solid;">
+			<h3>Utilisateur : <%= post.user.email %></h3>
+			<h2>Titre : <%= post.title %> </h2>
+			<p>Contenu : <%= post.content %></p>
+		</div>
+		<div class="card-index-post-content" style="width: 18rem;">
+			<p>
+				<a href="<%= post_path(post.id) %>", class="btn btn-primary">Lire la suite </a>
+				<a href="<%= edit_post_path(post.id) %>", class="btn btn-primary"> Editer </a>
+				<a href="<%= post_path(post.id) %>", class="btn btn-danger" data-confirm="Sur?" data-method="delete">Supprimer</a>
+			</p>
+		</div>
+	</div>
+	<%end%>
 
 <a class="btn btn-warning" href="<%= new_post_path %>"> Creer un article </a>

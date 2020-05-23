@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-
+	before_action :authenticate_user!
 	before_action :set_post, only: [:update, :edit, :destroy, :show]
 	
 	def index
@@ -24,9 +24,12 @@ class PostsController < ApplicationController
 	end
 
 	def update
-		@post.update(post_params)
-		flash[:success] = "Vous avez bien modifié l'article"
-		redirect_to posts_path
+		if @post.update(post_params)
+			flash[:success] = "Vous avez bien modifié l'article"
+			redirect_to posts_path
+		else
+			render 'edit'
+		end
 	end
 
 	def destroy

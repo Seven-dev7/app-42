@@ -1,16 +1,8 @@
 <h1> Editer  article </h1>
 
-<%= form_with model: @post do |f| %>
-  	<div class="form-group">
-  		<label> Titre de L'article </label>
-  		<%= f.text_field :title, class: 'form-control' %>
-	</div>
 
-	<div class="form-group">
-		<label> Contenu </label>
-  		<%= f.text_area :content, class: 'form-control' %>
-  	</div>
-  	<div class="form-group">
-  		<%= f.submit "Edit", class: "btn btn-primary" %>
-  	</div>
+<%= simple_form_for @post do |f| %>
+  <%= f.input :title, label: "Titre de l'article", error: 'Un titre est obligatoire' %>
+  <%= f.input :content, label: "Contenu de l'article" %>
+  <%= f.button :submit, class: "btn btn-primary" %>
 <% end %>

@@ -18,17 +18,20 @@ class PostsController < ApplicationController
 	end
 
 	def create
-		@post = Post.create(post_params)
+		post = Post.create(post_params)
+		flash[:primary] = "article creer"
 		redirect_to post_path(post.id)
 	end
 
 	def update
 		@post.update(post_params)
+		flash[:success] = "Vous avez bien modifié l'article"
 		redirect_to posts_path
 	end
 
 	def destroy
 		@post.destroy
+		flash[:danger] = "Vous avez bien supprimer l'article"
 		redirect_to posts_path
 	end
 

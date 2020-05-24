@@ -7,10 +7,19 @@
 <p>
 	createur du groupe : <%= @group.user.email %>
 </p>
-
+<p>
+  nombre de membres : <%= @group.memberships.count %>
+  nombre de membres : <%= @group.users.count %>
+</p>
+<p>
+  date de création : <%= @group.created_at %>
+</p>
 <p>
 	<a href="<%= edit_group_path(@group.id) %>", class="btn btn-primary"> Editer </a>
 	<a href="<%= group_path(@group.id) %>", class="btn btn-danger" data-confirm="Sur?" data-method="delete">Supprimer</a>
 	<a href="<%= groups_path %>", class="btn btn-warning"> Liste des Groupes </a>
+	<% unless @group.users.include?(current_user) %>	
+  <%= button_to 'Rejoindre', {:action => 'create_membership', :user_id => current_user.id, :group_id => @group.id} %>
+  <%end%>
 </p>
 

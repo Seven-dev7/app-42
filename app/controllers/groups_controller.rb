@@ -1,7 +1,6 @@
 class GroupsController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_group, only: [:update, :edit, :destroy, :show]
-  
+  before_action :set_group, only: %i[update edit destroy show create_membership]
   def index
     @groups = Group.all
   end
@@ -11,7 +10,6 @@ class GroupsController < ApplicationController
   end
 
   def show
-
   end
 
   def create
@@ -38,6 +36,12 @@ class GroupsController < ApplicationController
     redirect_to groups_path
   end
 
+  def create_membership
+    Membership.create!(user_id: params[:user_id], group_id: params[:group_id])
+    flash[:success] = "Vous avez bien rejoins le Groupe"
+    redirect_to group_path(params[:group_id])
+  end
+
   private
 
   def set_group
@@ -45,7 +49,7 @@ class GroupsController < ApplicationController
   end
 
   def group_params
-    params.require(:group).permit(:title, :description, :user_id)
+    params.require(:group).permit(:title, :description, :user_id, :group_id)
   end
 end
 

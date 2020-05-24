@@ -1,22 +1,22 @@
 <h1> Groupes </h1>
 <a class="btn btn-warning" href="<%= new_group_path %>"> Creer un Groupe </a>
-	<div class="card" >
-	<% @groups.each do |group| %>
-		<div class=" card-index-post-title" style=" border:solid;">
-			<h3>Utilisateur : <%= group.user.email %></h3>
-			<h2>Titre : <%= group.title %> </h2>
-			<p>Contenu : <%= group.description %></p>
-			<p>
-				créer par : <%= group.user.email %>
-			</p>
-		</div>
-		<div class="card-index-post-content" style="width: 18rem;">
-			<p>
-				<a href="<%= group_path(group.id) %>", class="btn btn-primary">Plus d'infos </a>
-				<a href="#", class="btn btn-success"> Rejoindre le groupe </a>
-			</p>
-		</div>
-	</div>
-	<%end%>
+<% @groups.each do |group| %>
+  <div class="card">
+    <div class=" card-index-post-title" style=" border:solid;">
+      <h3>Utilisateur : <%= group.user.email %></h3>
+      <h2>Titre : <%= group.title %> </h2>
+      <p>Contenu : <%= group.description %></p>
+      <p>
+        créer par : <%= group.user.email %>
+      </p>
+    </div>
+    <div class="card-index-post-content" style="width: 18rem;">
+      <p>
+        <a href="<%= group_path(group.id) %>" , class="btn btn-primary">Plus d'infos </a>
+        <a href="#" , class="btn btn-success"> Rejoindre le groupe </a>
+      </p>
+    </div>
+  </div>
+<% end %>
 
 <a class="btn btn-warning" href="<%= new_group_path %>"> Creer un Groupe </a>

@@ -6,6 +6,7 @@
 
 <p>
 	<a href="<%= edit_group_path(@group.id) %>", class="btn btn-primary"> Editer </a>
-	<a href="<%= groups_path %>", class="btn btn-success"> Accueil </a>
+	<a href="<%= group_path(@group.id) %>", class="btn btn-danger" data-confirm="Sur?" data-method="delete">Supprimer</a>
+	<a href="<%= groups_path %>", class="btn btn-warning"> Accueil </a>
 </p>
 

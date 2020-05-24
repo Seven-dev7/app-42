@@ -1,4 +1,6 @@
 class Group < ApplicationRecord
 	belongs_to :user
+    has_many :memberships
+    has_many :users, :through => :memberships
 	validates :title, presence: {message: "Vous devez entrer un titre"}
 end

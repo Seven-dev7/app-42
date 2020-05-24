@@ -5,8 +5,12 @@
 </p>
 
 <p>
+	createur du groupe : <%= @group.user.email %>
+</p>
+
+<p>
 	<a href="<%= edit_group_path(@group.id) %>", class="btn btn-primary"> Editer </a>
 	<a href="<%= group_path(@group.id) %>", class="btn btn-danger" data-confirm="Sur?" data-method="delete">Supprimer</a>
-	<a href="<%= groups_path %>", class="btn btn-warning"> Accueil </a>
+	<a href="<%= groups_path %>", class="btn btn-warning"> Liste des Groupes </a>
 </p>
 

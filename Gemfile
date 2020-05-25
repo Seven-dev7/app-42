@@ -6,8 +6,14 @@ ruby '2.5.1'
 # DEVISE
 gem 'devise', '~> 4.7', '>= 4.7.1'
 
+#omniauth
+gem 'omniauth', '~> 1.9', '>= 1.9.1'
 #omniauth-oauth2 
 gem 'omniauth-oauth2', '~> 1.6'
+#omniauth-facebook
+gem 'omniauth-facebook', '~> 6.0'
+#omniauth-twitter
+gem 'omniauth-twitter'
 
 #TABLE PRINT
 gem 'table_print', '~> 1.5', '>= 1.5.6'

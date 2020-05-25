@@ -7,10 +7,18 @@ class Ability
 
     user ||= User.new
 
-    alias_action :create, :read, :update, :destroy, :show, :create_membership, to: :crud
+    alias_action :show, :index, to: :read
+    alias_action :create, :read, :update, :destroy, :create_membership, to: :crud
 
-    can :crud, Post, {user_id: user.id}
-    can :crud, Group, {user_id: user.id}
+    can :read, Post
+    can [:read, :create_membership], Group
+
+    if user.present?  # additional permissions for logged in users (they can read their own posts)
+      can :crud, Post, user_id: user.id
+      can :crud, Group, user_id: user.id
+    end
+    #can :crud, Post, {user_id: user.id}
+    #can :crud, Group, {user_id: user.id}
     # Define abilities for the passed in user here. For example:
     #
     #   user ||= User.new # guest user (not logged in)

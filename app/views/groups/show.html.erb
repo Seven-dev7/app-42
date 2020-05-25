@@ -19,7 +19,7 @@
 	<a href="<%= group_path(@group.id) %>", class="btn btn-danger" data-confirm="Sur?" data-method="delete">Supprimer</a>
 	<a href="<%= groups_path %>", class="btn btn-warning"> Liste des Groupes </a>
 	<% unless @group.users.include?(current_user) %>	
-  <%= button_to 'Rejoindre', {:action => 'create_membership', :user_id => current_user.id, :group_id => @group.id} %>
+  <%= button_to 'Rejoindre', {:action => 'create_membership', :user_id => current_user.id, :group_id => @group.id}, class: 'btn btn-success' %>
   <%end%>
 </p>
 

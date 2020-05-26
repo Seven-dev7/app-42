@@ -19,8 +19,9 @@ html {
 }
 
 body {
-  	font-family: "Poppins", sans-serif;
-  	height: 100vh;
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+  width: 100%;
 	margin: 0;
 	padding: 0;
 }
@@ -54,7 +55,11 @@ body {
 	color: white;
 }
 
-/* */
+/* Input form  */
+
+#input-form * {
+  background: black !important;
+}
 
 a {
   color: #92badd;

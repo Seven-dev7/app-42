@@ -27,6 +27,9 @@ gem 'simple_form'
 #Authentication system : Cancancan
 gem 'cancancan', '~> 3.1'
 
+#factory bot
+gem 'factory_bot_rails', '~> 5.0', '>= 5.0.2'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.4', '>= 5.2.4.3'
 # Use postgresql as the database for Active Record
@@ -83,7 +86,6 @@ group :test do
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
   gem 'ffaker', '~> 2.15'
-  gem 'factory_bot_rails', '~> 5.0', '>= 5.0.2'
   gem 'rspec-expectations', '~> 3.9', '>= 3.9.2'
   gem 'rspec-core', '~> 3.9', '>= 3.9.2'
   gem 'rspec-mocks', '~> 3.9', '>= 3.9.1'

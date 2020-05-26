@@ -1,20 +1,27 @@
-<h1> Articles </h1>
-<a class="btn btn-warning" href="<%= new_post_path %>"> Creer un article </a>
-	<div class="card" >
-	<% @posts.each do |post| %>
-		<div class=" card-index-post-title" style="width: 48rem; border:solid;">
-			<h3>Utilisateur : <%= post.user.email %></h3>
-			<h2>Titre : <%= post.title %> </h2>
-			<p>Contenu : <%= post.content %></p>
-		</div>
-		<div class="card-index-post-content" style="width: 18rem;">
-			<p>
-				<a href="<%= post_path(post.id) %>", class="btn btn-primary">Lire la suite </a>
-				<a href="<%= edit_post_path(post.id) %>", class="btn btn-primary"> Editer </a>
-				<a href="<%= post_path(post.id) %>", class="btn btn-danger" data-confirm="Sur?" data-method="delete">Supprimer</a>
-			</p>
-		</div>
-	</div>
-	<%end%>
+
 
 <a class="btn btn-warning" href="<%= new_post_path %>"> Creer un article </a>
+
+<% @posts.each do |post| %>
+	<div class="container">
+		<div class="col-md-12">
+    		<h1><%= post.title %></h1>
+    		<p><%= post.content %>.</p>
+    		<div>
+				<span class="badge"><%= post.created_at %></span>
+				<div class="pull-right">
+					<span class="label label-default"><%= post.user.email %></span>
+					<span class="label label-primary">story</span> 
+					<span class="label label-success">blog</span> 
+					<span class="label label-info">personal</span>
+					<span class="label label-warning">Warning</span>
+					<span class="label label-danger">Danger</span>
+				</div>         
+     		</div>
+		</div>
+			    <p class="card-index-content">
+			      <a href="<%= post_path(post.id) %>" , class="btn btn-primary">Plus d'infos </a>
+			    </p>
+			    <hr>		
+	</div>
+<% end %>

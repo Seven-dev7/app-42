@@ -1,21 +1,26 @@
-<h1> Groupes </h1>
-<a class="btn btn-warning" href="<%= new_group_path %>"> Creer un Groupe </a>
-<% @groups.each do |group| %>
-  <div class="card">
-    <div class=" card-index-post-title" style=" border:solid;">
-      <h3>Utilisateur : <%= group.user.email %></h3>
-      <h2>Titre : <%= group.title %> </h2>
-      <p>Contenu : <%= group.description %></p>
-      <p>
-        créer par : <%= group.user.email %>
-      </p>
-    </div>
-    <div class="card-index-post-content" style="width: 18rem;">
-      <p>
-        <a href="<%= group_path(group.id) %>" , class="btn btn-primary">Plus d'infos </a>
-      </p>
-    </div>
-  </div>
-<% end %>
+
 
 <a class="btn btn-warning" href="<%= new_group_path %>"> Creer un Groupe </a>
+<% @groups.each do |group| %>
+  <div class="container">
+    <div class="col-md-12">
+        <h1><%= group.title %></h1>
+        <p><%= group.description %>.</p>
+        <div>
+        <span class="badge"><%= group.memberships.count %></span>
+        <div class="pull-right">
+          <span class="label label-default"><%= group.user.email %></span>
+          <span class="label label-primary">story</span> 
+          <span class="label label-success">blog</span> 
+          <span class="label label-info">personal</span>
+          <span class="label label-warning">Warning</span>
+          <span class="label label-danger">Danger</span>
+        </div>         
+        </div>
+    </div>
+          <p class="card-index-content">
+            <a href="<%= group_path(group.id) %>" , class="btn btn-primary">Plus d'infos </a>
+          </p>
+          <hr>
+  </div>
+<% end %>

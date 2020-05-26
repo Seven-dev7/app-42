@@ -29,6 +29,12 @@ gem 'cancancan', '~> 3.1'
 
 #factory bot
 gem 'factory_bot_rails', '~> 5.0', '>= 5.0.2'
+gem 'ffaker', '~> 2.15'
+gem 'rspec-expectations', '~> 3.9', '>= 3.9.2'
+gem 'rspec-core', '~> 3.9', '>= 3.9.2'
+gem 'rspec-mocks', '~> 3.9', '>= 3.9.1'
+gem 'rspec-support', '~> 3.9', '>= 3.9.3'
+gem 'shoulda-matchers', '~> 4.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.4', '>= 5.2.4.3'
@@ -85,12 +91,7 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
-  gem 'ffaker', '~> 2.15'
-  gem 'rspec-expectations', '~> 3.9', '>= 3.9.2'
-  gem 'rspec-core', '~> 3.9', '>= 3.9.2'
-  gem 'rspec-mocks', '~> 3.9', '>= 3.9.1'
-  gem 'rspec-support', '~> 3.9', '>= 3.9.3'
-  gem 'shoulda-matchers', '~> 4.3'
+  
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

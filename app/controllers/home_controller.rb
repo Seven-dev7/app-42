@@ -3,6 +3,6 @@ class HomeController < ApplicationController
   end
 
   def profil
-  	@user = User.find_by(params[:id])
+  	@user = User.find(current_user.id)
   end
 end

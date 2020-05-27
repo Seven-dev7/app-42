@@ -1,8 +1,19 @@
-<h1> Creer un Groupe</h1> 
+<h2 class="h2-form", style="margin-left: 35%;margin-bottom: 3%;">Creer un Groupe </h2>
+    <%= simple_form_for @group do |f| %>
+    <div class="form-create">
+      <div class="input-form">
+        <%= f.input :title, label: "Le titre ddu Groupe", error: 'Un titre est obligatoire' %>
+      </div>
+      <div class="input-form">
+        <%= f.input :description, label: "description du Groupe" %>
+      </div>
+      <div class="input-form">
+        <%= f.association :user, as: :hidden, input_html: {value: current_user.id} %>
+      </div>
+      <div class="submit-form", style="margin-left: 20%;margin-bottom: 3%;">
+        <%= f.submit "Créer" %>
+      </div>
+      <% end %>
+    </div>
 
-<%= simple_form_for @group do |f| %>
-  <%= f.input :title, label: "Le titre de l'article", error: 'Un titre est obligatoire' %>
-  <%= f.input :description, label: "description du Groupe" %>
-  <%= f.association :user, as: :hidden, input_html: {value: current_user.id} %>  
-  <%= f.button :submit %>
-<% end %>
+

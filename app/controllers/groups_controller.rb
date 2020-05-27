@@ -2,6 +2,7 @@ class GroupsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_group, only: %i[update edit destroy show create_membership]
   authorize_resource
+  
   def index
     @groups = Group.all
   end

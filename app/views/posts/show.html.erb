@@ -6,5 +6,6 @@
 
 <p>
 	<a href="<%= edit_post_path(@post.id) %>", class="btn btn-primary"> Editer </a>
-	<a href="<%= posts_path %>", class="btn btn-primary"> Accueil </a>
+	<a href="<%= post_path(@post.id) %>", class="btn btn-danger" data-confirm="Sur?" data-method="delete">Supprimer</a>
+	<a href="<%= posts_path %>", class="btn btn-warning"> Liste des Articles </a>
 </p>

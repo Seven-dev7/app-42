@@ -1,20 +1,26 @@
-<div class="card">
-  <h2>Sign up</h2>
+<h2 class="h2-form">Sign up</h2>
     <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <div class="form-create">
       <%= render "devise/shared/error_messages", resource: resource %>
       <div class="input-form">
-        <%= f.input :email, autofocus: true, autocomplete: "email", input_html: { class: 'form-control'} %><br>
+        <%= f.input :email, autofocus: true, autocomplete: "email" %>
       </div>
-      <div class="form-group">
-        <%= f.input :password, autocomplete: "new-password", input_html: { class: 'form-control'} %>
+      <div class="input-form">
+        <%= f.input :password, autocomplete: "new-password" %>
         <em>(<%= @minimum_password_length %> characters minimum)</em><br>
       </div>
-        <%= f.input :password_confirmation, autocomplete: "new-password", input_html: { class: 'form-group'} %>
-
-
-      <div class="actions">
+      <div class="input-form">
+        <%= f.input :password_confirmation, autocomplete: "new-password" %>
+      </div>
+      <div class="submit-form">
         <%= f.submit "Sign up" %>
       </div>
-  <% end %>
-<%= render "devise/shared/links" %>
-</div>
+      <div class="formFooter">
+        <%= link_to "Se connecter via twitter", user_twitter_omniauth_authorize_path %>
+      </div>
+      <% end %>
+    </div>
+
+
+
+

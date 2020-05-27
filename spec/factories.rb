@@ -7,8 +7,8 @@ FactoryBot.define do
   end
 
   factory :admin, class: User do
-    email { 'jpmagido@me.com' }
-    password { 'blablabla' }
+    email { 'ouss@yopmail.com' }
+    password { 'oussama' }
   end
 
   factory :membership do

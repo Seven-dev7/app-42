@@ -1,4 +1,4 @@
-<h2 class="h2-form", style="margin-left: 35%;margin-bottom: 3%;">Creer un Groupe </h2>
+<h2 class="h2-form", style="margin-left:35%;margin-bottom:3%;">Creer un Groupe </h2>
     <%= simple_form_for @group do |f| %>
     <div class="form-create">
       <div class="input-form">
@@ -10,7 +10,7 @@
       <div class="input-form">
         <%= f.association :user, as: :hidden, input_html: {value: current_user.id} %>
       </div>
-      <div class="submit-form", style="margin-left: 20%;margin-bottom: 3%;">
+      <div class="submit-form", style="margin-left:20%;margin-bottom:3%;">
         <%= f.submit "Créer" %>
       </div>
       <% end %>

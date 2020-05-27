@@ -59,9 +59,10 @@ body {
 
 
 .input-form {
-  margin-left: 40%
+  margin-left: 40%;
   width: 200px;
 }
+
 .form-create {
   border: none;
   margin-left: 20%;

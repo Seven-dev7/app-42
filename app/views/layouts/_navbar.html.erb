@@ -20,9 +20,11 @@
       </li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
-      <li class="nav-item active">
+      <% if user_signed_in? %>
+      <li class="">
         <%= link_to(avatar_for(current_user), size: 10) %>
       </li>
+      <%end%>
     </ul>
   </div>
 </nav>

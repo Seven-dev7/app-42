@@ -14,7 +14,7 @@
  *= require_self
  */
 
-@import "modules/avatar"
+@import "modules/avatar";
 
 
 html {

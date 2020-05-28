@@ -14,7 +14,10 @@ gem 'omniauth-oauth2', '~> 1.6'
 gem 'omniauth-facebook', '~> 6.0'
 #omniauth-twitter
 gem 'omniauth-twitter'
-
+#carrierwave
+gem 'carrierwave', '~> 0.11.2'
+#mini_magic
+gem 'mini_magick', '~> 4.5', '>= 4.5.1'
 #TABLE PRINT
 gem 'table_print', '~> 1.5', '>= 1.5.6'
 

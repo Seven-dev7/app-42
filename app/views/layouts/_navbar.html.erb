@@ -5,7 +5,7 @@
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav">
+    <ul class="nav navbar-nav navbar-left mt-5 ml-5 pt-3">
       <li class="nav-item active">
         <a class="nav-link " href="<%= root_path %>">Accueil</a>
       </li>
@@ -17,6 +17,11 @@
       </li>
       <li class="nav-item active">
         <a class="nav-link" href="<%= home_profil_path %>">Profil</a>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li class="nav-item active">
+        <%= link_to(avatar_for(current_user), size: 10) %>
       </li>
     </ul>
   </div>

@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
   protected
 
   def configure_permitted_parameters
-    parameters = %i(first_name last_name age job email password current_password password_confirmation)
+    parameters = %i(first_name last_name age job avatar email password current_password password_confirmation)
     devise_parameter_sanitizer.permit(:sign_up) { |u| u.permit(:email, :password) }
     devise_parameter_sanitizer.permit(:account_update) { |u| u.permit(parameters) }
   end

@@ -13,6 +13,10 @@
  *= require_tree .
  *= require_self
  */
+
+ @import "modules/avatar"
+
+ 
 html {
   /*background-color: #56baed;*/
   background-color: white;
@@ -54,6 +58,8 @@ body {
 .bg-bl a {
 	color: white;
 }
+
+/* Avatar Image */
 
 /* Input form  */
 

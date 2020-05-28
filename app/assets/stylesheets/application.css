@@ -14,9 +14,9 @@
  *= require_self
  */
 
- @import "modules/avatar"
+@import "modules/avatar"
 
- 
+
 html {
   /*background-color: #56baed;*/
   background-color: white;

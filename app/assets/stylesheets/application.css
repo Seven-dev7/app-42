@@ -29,19 +29,21 @@ body {
 	margin: 0;
 	padding: 0;
 }
+
 .card-index-post-title {
 	width: 48rem;
 	margin-left: 15%;
 	margin-top: 2%;
 	margin-bottom: 5%;
 }
+
 .card-index-content {
 	margin-left: 1%;
 	margin-top: 2%;
 	margin-bottom: 5%;
 }
 
-/* Style css */
+/* Nav Style css */
 .nav_style {
 	border: transparent;
 	border-radius: 5%;
@@ -60,6 +62,7 @@ body {
 }
 
 /* Avatar Image */
+
 
 /* Input form  */
 

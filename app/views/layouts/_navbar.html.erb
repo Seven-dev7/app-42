@@ -21,9 +21,9 @@
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <% if user_signed_in? && current_user.avatar? %>
-          <li>
+        <li>
           <%= image_tag current_user.avatar.url(:thumb), class: 'img-avatar' %>
-          </li>
+        </li>
       <%end%>
     </ul>
   </div>

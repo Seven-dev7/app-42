@@ -1,12 +1,10 @@
 <div class="container">
     <div class="" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="">
-            <div class="">
-                <div class="modal-body">
+            <div class="modal-body">
                  <!--   <img src="https://images.assetsdelivery.com/compings_v2/gmast3r/gmast3r1710/gmast3r171002485.jpg" name="aboutme" width="140" height="140" border="0" class="img-circle"></a> -->
-                    <div class="img-position-avatar">
+                <div class="img-position-avatar">
                     <%= avatar_for(@user) %>
-                    </div>
+                </div>
                     <h3 class="media-heading">Nom : <%= @user.last_name %></h3>
                     <h3 class="media-heading">Prenom : <%= @user.first_name %></h3>
                     <h3 class="media-heading">Age : <%= @user.age %> ans</h3>
@@ -20,8 +18,6 @@
                     <a> <%= link_to "Editer son Profil", edit_user_registration_path %></a>
                     <p><%= button_to "Supprimer mon Compte", user_registration_path, data: { confirm: "Etes-vous sur ?" }, method: :delete %>
                     </p>
-                </div>
             </div>
-        </div>
     </div>
 </div>

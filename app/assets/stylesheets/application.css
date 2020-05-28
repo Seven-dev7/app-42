@@ -14,9 +14,6 @@
  *= require_self
  */
 
-@import "modules/avatar";
-
-
 html {
   /*background-color: #56baed;*/
   background-color: white;
@@ -62,7 +59,15 @@ body {
 }
 
 /* Avatar Image */
-
+.avatar-image {
+  border-radius: 20%;
+}
+.img-avatar {
+  width: 70%;
+}
+.img-position-avatar {
+  margin-right: 90%;
+}
 
 /* Input form  */
 

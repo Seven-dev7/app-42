@@ -23,7 +23,7 @@
       </div>
 
       <div class="input-form">
-        <%= f.file_field :avatar %>
+        <%= f.input :avatar, as: :file %>
       </div>
 
       <div class="input-form">
@@ -41,7 +41,7 @@
       </div>
 
       <div class="submit-form">
-        <%= f.submit "Sign up" %>
+        <%= f.submit "Modifier" %>
       </div>
       <div class="formFooter">
         <%= link_to "Se connecter via twitter", user_twitter_omniauth_authorize_path %><br>

@@ -5,7 +5,7 @@
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="nav navbar-nav navbar-left mt-5 ml-5 pt-3">
+    <ul class="nav navbar-nav navbar-left mr-5 mt-3">
       <li class="nav-item active">
         <a class="nav-link " href="<%= root_path %>">Accueil</a>
       </li>
@@ -20,10 +20,10 @@
       </li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
-      <% if user_signed_in? %>
-      <li class="">
-        <%= link_to(avatar_for(current_user), size: 10) %>
-      </li>
+      <% if user_signed_in? && current_user.avatar? %>
+          <li>
+          <%= image_tag current_user.avatar.url(:thumb), class: 'img-avatar' %>
+          </li>
       <%end%>
     </ul>
   </div>

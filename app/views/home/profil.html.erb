@@ -3,18 +3,16 @@
         <div class="">
             <div class="">
                 <div class="modal-body">
-                    <center>
                  <!--   <img src="https://images.assetsdelivery.com/compings_v2/gmast3r/gmast3r1710/gmast3r171002485.jpg" name="aboutme" width="140" height="140" border="0" class="img-circle"></a> -->
-                    
+                    <div class="img-position-avatar">
                     <%= avatar_for(@user) %>
-                    
+                    </div>
                     <h3 class="media-heading">Nom : <%= @user.last_name %></h3>
                     <h3 class="media-heading">Prenom : <%= @user.first_name %></h3>
                     <h3 class="media-heading">Age : <%= @user.age %> ans</h3>
                     <h3 class="media-heading">Emploi : <%= @user.job %></h3>
                     <h3 class="media-heading">Email : <%= @user.email %></h3>
                     <h3 class="media-heading">Compte crée : <%= @user.created_at %></h3>
-                    </center>
                     <hr>
                     <center>
                     <br>

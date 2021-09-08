@@ -22,7 +22,7 @@ gem 'mini_magick', '~> 4.5', '>= 4.5.1'
 gem 'table_print', '~> 1.5', '>= 1.5.6'
 
 # BETTER ERRORS
-gem 'better_errors', '~> 2.7', '>= 2.7.1'
+gem 'better_errors', '~> 2.8'
 
 # Simple form
 gem 'simple_form'

@@ -7,7 +7,7 @@ ruby '2.5.1'
 gem 'devise', '~> 4.7', '>= 4.7.1'
 
 #omniauth
-gem 'omniauth', '~> 1.9', '>= 1.9.1'
+gem 'omniauth', '~> 1.9'
 #omniauth-oauth2 
 gem 'omniauth-oauth2', '~> 1.6'
 #omniauth-facebook
